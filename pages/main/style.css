@@ -573,6 +573,13 @@ footer {
 footer nav {
   width: 362px;
 }
+footer nav a {
+  color: white;
+  text-decoration: none;
+}
+footer nav a:hover {
+  color: var(--Orang);
+}
 .copyrights p {
   color: white;
   font-weight: 100;
