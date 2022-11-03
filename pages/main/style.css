@@ -22,6 +22,28 @@
       #eaf7fe 127.9%,
       #eaf7fe 149.54%
     );
+  --orange-gradient-2: linear-gradient(
+      315.75deg,
+      rgba(254, 210, 144, 0.7) 30.06%,
+      #febdab 100.95%,
+      rgba(254, 210, 144, 0.7) 106.36%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
 }
 
 * {
@@ -247,6 +269,9 @@ section {
 .animal-pic {
   width: 100%;
   display: block;
+  transform: scale(0.95);
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
 }
 .card-description {
   width: 100%;
@@ -254,6 +279,15 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.card:hover .card-description {
+  opacity: 1;
+}
+.card:hover .animal-pic {
+  border-radius: 0;
+  transform: scale(1);
 }
 .text {
   height: 100%;
