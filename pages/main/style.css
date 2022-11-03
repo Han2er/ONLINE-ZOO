@@ -42,14 +42,20 @@ header {
   top: 0;
   left: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0 220px;
   background-color: black;
   backdrop-filter: blur(2px);
 
   color: white;
   z-index: 10;
+}
+.wrapper {
+  width: 100%;
+  max-width: 1160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 header a {
   text-decoration: none;
@@ -159,7 +165,6 @@ section {
 #section-2 {
   width: 100%;
   height: 683px;
-  padding: 140px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,7 +212,7 @@ section {
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  padding-top: 40px;
+  margin-top: 40px;
   gap: 80px;
 }
 .slider-container {
@@ -292,7 +297,6 @@ section {
 #section-4 {
   width: 100%;
   height: 1004px;
-  padding: 69px 220px;
   background: linear-gradient(
       315.75deg,
       rgba(254, 210, 144, 0.7) 30.06%,
@@ -319,6 +323,7 @@ section {
 }
 .donate-wrapper {
   width: 100%;
+  max-width: 1160px;
   height: 835px;
   background: rgba(253, 253, 255, 0.52);
   backdrop-filter: blur(2px);
@@ -381,10 +386,12 @@ section {
 #section-5 {
   width: 100%;
   height: 919px;
-  padding: 0 220px;
-  padding-top: 140px;
   position: relative;
   overflow: hidden;
+}
+#section-5 .wrapper {
+  flex-direction: column;
+  align-items: stretch;
 }
 #section-5 h3 {
   font: 400 36px "Roboto", sans-serif;
@@ -484,7 +491,10 @@ footer {
   width: 100%;
   height: 443px;
   background-color: #111115;
-  padding: 0 220px;
+  /* padding: 0 220px; */
+}
+footer .wrapper {
+  display: block;
 }
 .row {
   height: 160px;
