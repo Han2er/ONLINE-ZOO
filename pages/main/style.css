@@ -244,10 +244,11 @@ section {
 }
 .cards-container {
   width: 1158px;
-  height: 872px;
+  /* height: 872px; */
   flex-wrap: wrap;
   column-gap: 30px;
   row-gap: 20px;
+  padding: 5px 0;
 }
 .card {
   width: 366px;
@@ -266,11 +267,21 @@ section {
   background: linear-gradient(113.96deg, #fa6f32 1.49%, #fe9013 101.44%);
   z-index: -1;
 }
+.cards-container .card::after {
+  content: "";
+  position: absolute;
+  width: 366px;
+  height: 426px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
 .animal-pic {
   width: 100%;
-  display: block;
-  transform: scale(0.95);
-  border-radius: 4px;
+  overflow: hidden;
+}
+.animal-pic img {
+  width: 100%;
   transition: all 0.3s ease-in-out;
 }
 .card-description {
@@ -279,15 +290,9 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
 }
-.card:hover .card-description {
-  opacity: 1;
-}
-.card:hover .animal-pic {
-  border-radius: 0;
-  transform: scale(1);
+.card:hover .img-1 {
+  transform: scale(1.1);
 }
 .text {
   height: 100%;
