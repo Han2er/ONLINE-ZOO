@@ -83,7 +83,8 @@ header a {
   text-decoration: none;
   color: white;
 }
-header a:hover {
+header a:hover,
+.h1:hover {
   color: var(--Orang);
 }
 nav {
@@ -97,7 +98,8 @@ nav {
   color: var(--Orang);
   font-weight: 500;
 }
-h1 {
+h1,
+.h1 {
   text-align: center;
   font: 400 19px "Roboto", sans-serif;
   line-height: 120%;
@@ -244,10 +246,11 @@ section {
 }
 .cards-container {
   width: 1158px;
-  height: 872px;
+  /* height: 872px; */
   flex-wrap: wrap;
   column-gap: 30px;
   row-gap: 20px;
+  padding: 5px 0;
 }
 .card {
   width: 366px;
@@ -266,11 +269,21 @@ section {
   background: linear-gradient(113.96deg, #fa6f32 1.49%, #fe9013 101.44%);
   z-index: -1;
 }
+.cards-container .card::after {
+  content: "";
+  position: absolute;
+  width: 366px;
+  height: 426px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
 .animal-pic {
   width: 100%;
-  display: block;
-  transform: scale(0.95);
-  border-radius: 4px;
+  overflow: hidden;
+}
+.animal-pic img {
+  width: 100%;
   transition: all 0.3s ease-in-out;
 }
 .card-description {
@@ -279,15 +292,9 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
 }
-.card:hover .card-description {
-  opacity: 1;
-}
-.card:hover .animal-pic {
-  border-radius: 0;
-  transform: scale(1);
+.card:hover .img-1 {
+  transform: scale(1.1);
 }
 .text {
   height: 100%;
@@ -395,6 +402,7 @@ section {
 .undeline {
   text-decoration: underline #fe9013;
   text-underline-offset: 4px;
+  color: unset;
 }
 .how-it-works-container {
   width: 764px;
@@ -555,17 +563,24 @@ footer .wrapper {
   padding: 10px;
 }
 #input-email::placeholder {
-  /* padding: 10px; */
   color: #bdbdbd;
 }
 .submit {
   display: block;
   width: 129px;
   height: 42px;
-  color: #4b9200;
+  color: black;
   background: #f1f3f2;
-  border: 1px solid #4b9200;
+  border: 1px solid black;
   border-radius: 5px;
+  cursor: pointer;
+}
+.submit:hover {
+  color: var(--Orange-2);
+}
+.submit:active {
+  color: #4b9200;
+  border: 1px solid #4b9200;
 }
 .links {
   display: flex;
@@ -585,6 +600,9 @@ footer .wrapper {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+.soc-media a:hover p {
+  color: var(--Orange-2);
 }
 .soc-media a:active {
   color: var(--green);
@@ -627,6 +645,7 @@ footer nav a:hover {
 .copyrights p {
   color: white;
   font-weight: 100;
+  cursor: pointer;
 }
 .copyrights p:active {
   color: var(--green);

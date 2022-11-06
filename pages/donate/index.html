@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/icons/gorilla_icon.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../main/style.css">
     <link rel="stylesheet" href="style.css">
@@ -31,23 +32,36 @@
         </div>
     </header>
     <main>
-        <div class="flex-center img-container">
+        <section class="flex-center img-container">
             <img src="../../assets/images/Giant Panda.jpg" alt="panda">
-        </div>
-        <div class="pick-and-feed"></div>
+        </section>
+        <section class="flex-center pick-and-feed">
+            <div class="wrapper need-help">
+                <h3>THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!</h3>
+                <p class="textstyle-body">Even though the Zoo has been able to reopen, we are at a greatly reduced
+                    capacity
+                    with educational programs and public and private events cancelled or postponed for additional
+                    months. We need you now more than ever to help ensure that we overcome these challenges. We have
+                    been actively raising funds in the community, and we are grateful for the generosity. But much more
+                    support is still needed, and we need your help! Please consider a gift today – no matter what size –
+                    to help us sustain our mission.</p>
+                <h3 class="info">Donation Information</h3>
+                <div class="pick-and-feed"></div>
+            </div>
+        </section>
     </main>
 
     <footer class="flex-center">
         <div class="wrapper">
             <div class="flex-center row">
-                <a class="logo" href="">
-                    <h1>PetStory<br>online</h1>
+                <a class="logo" href="../main/index.html">
+                    <h2 class="h1">PetStory<br>online</h2>
                     <img src="../../assets/icons/bamboo.svg" alt="bamboo">
                 </a>
                 <div class="mail">
                     <h4>Subscribe to our news</h4>
                     <form action="">
-                        <input id="input-email" type="text" placeholder="Enter your email">
+                        <input id="input-email" type="email" placeholder="Enter your email">
                         <input class="submit" type="submit" value="Submit">
                     </form>
                 </div>
@@ -73,7 +87,7 @@
                     </a>
                 </div>
                 <nav>
-                    <a href="../main/index.html">About</a>
+                    <a class="active" href="">About</a>
                     <a href="">Map</a>
                     <a href="">Zoos</a>
                     <a href="">Contact us</a>
