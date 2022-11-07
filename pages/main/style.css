@@ -199,6 +199,9 @@ section {
   justify-content: center;
   align-items: center;
 }
+.column {
+  flex-direction: column;
+}
 #section-2 .flex-center {
   justify-content: space-between !important;
   width: 1161px;
