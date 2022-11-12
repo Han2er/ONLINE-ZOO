@@ -62,6 +62,41 @@
                             </div>
                             <img src="../../assets/icons/panda_widget1.svg" alt="panda">
                         </div>
+
+                        <form id="donate-form" action="">
+                            <div class="progress-wrapper">
+                                <p class="amount-text">Amount</p>
+                                <div class="flex-center progress">
+                                    <div class="progress-line">
+                                        <div class="circle-btn"></div>
+                                        <div class="circle-btn"></div>
+                                        <div class="circle-btn active-btn"></div>
+                                        <div class="circle-btn"></div>
+                                        <div class="circle-btn"></div>
+                                        <div class="circle-btn"></div>
+                                        <div class="circle-btn"></div>
+                                        <div class="circle-btn"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="amount-wrapper">
+                                <input type="number" name="amount" min="0" max="9999" id="amount"
+                                    placeholder="Another amount">
+                            </div>
+                            <div class="radio-buttons">
+                                <div>
+                                    <input type="radio" name="donate-type" id="donate-type" value="monthly">
+                                    <label for="donate-type">Monthly</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="donate-type" id="donate-type" value="once"
+                                        checked="checked">
+                                    <label for="donate-type">Once</label>
+                                </div>
+                            </div>
+                            <input id="submit-donation" type="submit" class="btn" value="FEED A FRIEND NOW">
+                            <p>Share with your friends on social networks </p>
+                        </form>
                     </div>
                 </div>
             </div>
