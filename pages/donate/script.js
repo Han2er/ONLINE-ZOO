@@ -1,6 +1,6 @@
-setTimeout(() => {
-  alert("Please check my work a few days later. \nstill in progress");
+// setTimeout(() => {
+//   alert("Please check my work a few days later. \nstill in progress");
 
-  alert(`Thanks in advanse
-  ❤️`);
-}, 2000);
+//   alert(`Thanks in advanse
+//   ❤️`);
+// }, 2000);
