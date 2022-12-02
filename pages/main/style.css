@@ -781,4 +781,46 @@ footer nav a:hover {
     top: 25px;
     left: 50px;
   }
+  #section-2 {
+    justify-content: flex-start;
+  }
+  .china-man-img {
+    display: none;
+  }
+  .section-2-content {
+    width: 80% !important;
+  }
+  #flower-1 {
+    left: 80%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header {
+    padding: 0 10px;
+  }
+  header .logo {
+    width: auto;
+  }
+  #section-1 {
+    height: auto;
+  }
+  #section-1 img {
+    height: 187px;
+  }
+  .ellipce {
+    width: 119px;
+    height: 119px;
+    left: calc(50% - 119.09px / 2 + 62.45px);
+    top: 40px;
+  }
+  .ellipce .btn {
+    position: relative;
+  }
+  .ellipce h2 {
+    font-size: 27px;
+    line-height: 75%;
+    top: 10px;
+    left: 25px;
+  }
 }
