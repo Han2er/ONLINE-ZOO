@@ -82,6 +82,7 @@ header {
 }
 .burger-wrapper {
   display: none;
+  z-index: 10;
 }
 header a {
   text-decoration: none;
@@ -106,7 +107,7 @@ nav {
   gap: 48px;
 }
 .active {
-  color: var(--Orang);
+  color: var(--Orang) !important;
   font-weight: 500;
 }
 h1,
@@ -479,6 +480,7 @@ section {
   display: flex;
   justify-content: space-between;
   gap: 30px;
+  overflow: hidden;
 }
 
 .testimonials-cards {
@@ -489,7 +491,10 @@ section {
   border-radius: 20px;
   position: relative;
 }
-.testimonials-cards::before {
+.testimonials-cards {
+  border: 2px solid pink;
+}
+/* .testimonials-cards::before {
   content: "";
   position: absolute;
   width: calc(100% + 4px);
@@ -497,7 +502,7 @@ section {
   border-radius: 22px;
   background: var(--pink-gradient);
   z-index: -1;
-}
+} */
 .testimonials-wrapper {
   width: 100%;
   height: calc(100% - 15px);
@@ -706,7 +711,7 @@ footer nav a:hover {
   cursor: pointer;
 }
 .line {
-  width: 100%;
+  width: 18px;
   height: 2px;
   border-radius: 2px;
   background-color: white;
@@ -823,4 +828,76 @@ footer nav a:hover {
     top: 10px;
     left: 25px;
   }
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container {
+  width: 320px;
+  min-height: 400px;
+  background-color: white;
+}
+.modal .testimonials-cards {
+  height: fit-content;
+  z-index: 0;
+}
+.modal .testimonials-wrapper {
+  overflow: visible;
+}
+.testionials .testimonials-cards {
+  cursor: pointer;
+}
+
+/* burger menu  */
+.menu {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: white;
+  padding: 10px;
+}
+.menu-wrapper {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: black;
+}
+.logo-menu {
+  margin-bottom: 15px;
+}
+.menu a {
+  color: inherit;
+}
+.show-menu {
+  display: block;
+}
+.black {
+  background-color: black !important;
+}
+.close-btn:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+}
+.close-btn:nth-child(2) {
+  display: none;
+}
+.close-btn:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
 }
